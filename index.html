@@ -45,19 +45,45 @@ h1 {
   color: #5a3d7a;
   font-size: 14px;
   margin-bottom: 15px;
-}
-
-/* Botón de compra */
-button {
-  background: linear-gradient(90deg, #b066ff, #d8b7ff, #ffd700);
-  color: white;
+	
+}<style>
+.buy-button {
+  background: linear-gradient(135deg, #a46dfb, #d6b3ff);
+  color: #fff;
   border: none;
-  padding: 10px 20px;
   border-radius: 25px;
+  padding: 10px 20px;
   cursor: pointer;
   font-weight: bold;
-  box-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
-  transition: all 0.3s ease;
+  text-transform: uppercase;
+  box-shadow: 0 0 10px gold, 0 0 20px #ffd700;
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.buy-button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75px;
+  width: 50px;
+  height: 100%;
+  background: rgba(255, 215, 0, 0.6);
+  transform: skewX(-20deg);
+  transition: 0.5s;
+}
+
+.buy-button:hover::after {
+  left: 125%;
+}
+
+
+
+</style>
+
+
+
 }
 
 button:hover {
@@ -239,3 +265,4 @@ footer {
 
 </body>
 </html>
+
