@@ -174,11 +174,24 @@ td {
   text-transform: uppercase;
   box-shadow: 0 0 10px gold, 0 0 20px #ffd700;
   transition: 0.3s;
+  position: relative;
+  overflow: hidden;
 }
 
-.buy-button:hover {
-  background: linear-gradient(135deg, #b27fff, #e0c3ff);
-  box-shadow: 0 0 20px #ffd700, 0 0 30px gold;
+.buy-button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75px;
+  width: 50px;
+  height: 100%;
+  background: rgba(255, 215, 0, 0.6);
+  transform: skewX(-20deg);
+  transition: 0.5s;
+}
+
+.buy-button:hover::after {
+  left: 125%;
 }
 
 footer {
@@ -211,15 +224,14 @@ footer {
     <img border="0" src="imagen2.jpg">
     <div class="product-name">Bornal De Perna Tatico Leg Bag Reforçada Pochete Militar Gg Militar Impermeável Tecido Oxford</div>
     <div class="product-description">Interior: PU impermeável 210D, Item no: novo saco de perna bolsa de cintura, Gênero aplicável: masculino,Tamanho: tamanho médio, Tipos de Pacotes Esportivos: Terceirização, Esportes aplicáveis: esportes ao ar livre.</div>
-    <a href="https://s.shopee.com.br/1BDUGZEQvU" class="botao" target="_blank">Compre aqui</a> 
-  </td>
+     <a href="https://s.shopee.com.br/1BDUGZEQvU" class="botao" target="_blank">Compre aqui</a>  </td>
   <td>
     <img border="0" src="imagen3.jpg">
     <div class="product-name">QUEIMA DE ESTOQUE - Aparador Buffet E&A 3 Portas com Pés Retro Cantinho Do Café</div>
     <div class="product-description">O Buffet é a combinação perfeita de charme, sofisticação, modernidade e um toque retrô. Além disso, ajuda a organizar o seu ambiente. Possui 2 prateleiras abertas e 1 compartimento com porta, que ajudam a acomodar seus aparelhos eletrônicos e objetos decorativos.
 
 .</div>
-    <a href="#"><button class="buy-button">https://s.shopee.com.br/11X1LJsSh</button></a>
+    <a href="https://s.shopee.com.br/11X1LJsSh" class="botao" target="_blank">Compre aqui</a>
   </td>
   <td>
     <img border="0" src="imagen4.jpg">
@@ -227,8 +239,7 @@ footer {
     <div class="product-description"> ENVIO IMEDIATO Super Macio E EXTREMAMENTE Confortável!!!&nbsp; Nossas formas são padrões, 
 		escolha a numeração que habitua usar, mas para lhe ajudar ainda mais, 
 		aqui está a nossa tabela de medidas.</div>
-    <a href="#"><button class="buy-button">https://s.shopee.com.br/6Kvaa3zQq6</button></a>
-  </td>
+   <a href="https://s.shopee.com.br/6Kvaa3zQq6" class="botao" target="_blank">Compre aqui</a>  </td>
 </tr>
 
 <!-- 🌸 Fila 2 -->
@@ -236,27 +247,68 @@ footer {
   <td><img border="0" src="imagen5.jpg"> <div class="product-name">
 	<span style="color: rgba(0, 0, 0, 0.8); font-family: Roboto, SHPBurmese, SHPKhmer, &quot;Helvetica Neue&quot;, Helvetica, Arial, 文泉驛正黑, &quot;WenQuanYi Zen Hei&quot;, &quot;Hiragino Sans GB&quot;, &quot;儷黑 Pro&quot;, &quot;LiHei Pro&quot;, &quot;Heiti TC&quot;, 微軟正黑體, &quot;Microsoft JhengHei UI&quot;, &quot;Microsoft JhengHei&quot;, sans-serif; font-size: 20px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 500; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">
 	Tênis Casual Femininio Estiloso Skatista Dia a Dia Envio Imediato Qualidade 
-	Barato Envio Imediato</span></div><div class="product-description">ENVIO IMEDIATO Super Macio E EXTREMAMENTE Confortável!!!.</div><a href="#"><button class="buy-button">https://s.shopee.com.br/2LPRor2IF9></a></td>
-  <td><img border="0" src="imagen6.jpg"><div class="product-name">Tênis Casual Feminino Confortável Branco Caramelo Preto Dia a Dia Estiloso Moda Blogueira Barato</div><div class="product-description">Dê uma olhada em Tênis Casual Feminino Confortável Branco Caramelo Preto Dia a Dia Estiloso Moda Blogueira Barato.</div><a href="#"><button class="buy-button">https://s.shopee.com.br/30f8cB68BF</button></a></td>
-  <td><img border="0" src="imagen7.jpg">"<div class="product-name">
-"Tênis Feminino Branco Casual Confortavel Leve Solado Macio Estiloso StreetWear Barato" class="product-image"><div class="product-name">Produto 7</div><div class="product-description">Dê uma olhada em Tênis Feminino Branco Casual Confortavel Leve Solado Macio Estiloso StreetWear Barato.</div><a href="#"><button class="buy-button">https://s.shopee.com.br/2qLiPzqKoe</button></a></td>
-  <td><img border="0" src="imagen8.jpg"><div class="product-name">Guarda Roupa Dobrável Organizador De Roupas Armário Grande</div><div class="product-description">Dê uma olhada em Guarda Roupa Dobrável Organizador De Roupas Armário Grande.</div><a href="#"><button class="buy-button">https://s.shopee.com.br/6AcAOSmgyM></a></td>
+	Barato Envio Imediato</span></div><div class="product-description">ENVIO IMEDIATO Super Macio E EXTREMAMENTE Confortável!!!.<p>&nbsp;</div>
+	
+	<a href="https://s.shopee.com.br/2LPRor2IF9" class="botao" target="_blank">Compre aqui</a> </td>
+	
+  <td><img border="0" src="imagen6.jpg"><div class="product-name">Tênis Casual Feminino Confortável Branco Caramelo Preto Dia a Dia Estiloso Moda Blogueira Barato</div><div class="product-description">Dê uma olhada em Tênis Casual Feminino Confortável Branco Caramelo Preto Dia a Dia Estiloso Moda Blogueira Barato.</div><a 
+  
+  <a href="https://s.shopee.com.br/30f8cB68BF" class="botao" target="_blank">Compre aqui</a> </td>
+    
+  <td><img border="0" src="<imagen7.jpg"> <div class="product-name">
+    
+"Tênis Feminino Branco Casual Confortavel Leve Solado Macio Estiloso StreetWear Barato" class="product-image"><div class="product-name">Produto 7</div><div class="product-description">Dê uma olhada em Tênis Feminino Branco Casual Confortavel Leve Solado Macio Estiloso StreetWear Barato.</div>
+
+ <a href="https://s.shopee.com.br/2qLiPzqKoe" class="botao" target="_blank">Compre aqui</a>  </td>
+
+
+  <td><img border="0" src="imagen8.jpg"><div class="product-name">Guarda Roupa Dobrável Organizador De Roupas Armário Grande</div><div class="product-description">Dê uma olhada em Guarda Roupa Dobrável Organizador De Roupas Armário Grande.</div>
+  
+ <a href="https://s.shopee.com.br/6AcAOSmgyM" class="botao" target="_blank">Compre aqui</a>
+ 
 </tr>
 
 <!-- 🌸 Fila 3 -->
 <tr>
-  <td><img border="0" src="imagen9.jpg"><div class="product-name">Guarda Roupa Portátil Desmontável Organizador Prático Solteiro e Casal</div><div class="product-description">Dê uma olhada em Guarda Roupa Portátil Desmontável Organizador Prático Solteiro e Casal .</div><a href="#"><button class="buy-button">https://s.shopee.com.br/2B61dEGlAe</button></a></td>
-  <td><img border="0" src="imagen10.jpg"><div class="product-name">Produto 10</div><div class="product-description">Dê uma olhada em Sapateira 4/5 andares Organizador de Sapatos Tênis 8/10 Pares Desmontável.</div><a href="#"><button class="buy-button">https://s.shopee.com.br/40XfofhIGj</button></a></td>
-  <td><img border="0" src="imagen11.jpg"><div class="product-name">Guarda Roupa Dobrável Organizador De Roupas Com Ziper Multifuncional</div><div class="product-description">Dê uma olhada em Guarda Roupa Dobrável Organizador De Roupas Com Ziper Multifuncional .</div><a href="#"><button class="buy-button">https://s.shopee.com.br/6AcAOozsA6</button></a></td>
-  <td><img border="0" src="imagen12.jpg"><div class="product-name">[ZY] 2-14y Estoque Pronto Roupas íntimas infantis de algodão puro Roupas íntimas infantis de algodão puro Roupas íntimas infantis</div><div class="product-description">Nível de segurança: Classe AProcesso Desossado: Nenhum Processo Desossado, Nome do tecido do nome: Algodão, Categoria de roupa interior: calcinha, Forma da Embalagem: Lite.</div><a href="#"><button class="buy-button">https://s.shopee.com.br/6VF0nb3ILM</button></a></td>
+  <td><img border="0" src="imagen9.jpg"><div class="product-name">Guarda Roupa Portátil Desmontável Organizador Prático Solteiro e Casal</div><div class="product-description">Dê uma olhada em Guarda Roupa Portátil Desmontável Organizador Prático Solteiro e Casal .</div>
+  
+ <a href="https://s.shopee.com.br/2B61dEGlAe" class="botao" target="_blank">Compre aqui</a>
+
+   
+  <td><img border="0" src="imagen10.jpg"><div class="product-name">&nbsp;</div><div class="product-description">Dê uma olhada em Sapateira 4/5 andares Organizador de Sapatos Tênis 8/10 Pares Desmontável.</div>
+  
+  <a href="https://s.shopee.com.br/40XfofhIGj" class="botao" target="_blank">Compre aqui</a>
+
+  
+  <td><img border="0" src="imagen11.jpg"><div class="product-name">Guarda Roupa Dobrável Organizador De Roupas Com Ziper Multifuncional</div><div class="product-description">Dê uma olhada em Guarda Roupa Dobrável Organizador De Roupas Com Ziper Multifuncional .</div><a 
+  
+   <a href="https://s.shopee.com.br/6AcAOozsA6" class="botao" target="_blank">Compre aqui</a>
+ 
+ <td><img border="0" src="imagen12.jpg"><div class="product-name">[ZY] 2-14y Estoque Pronto Roupas íntimas infantis de algodão puro Roupas íntimas infantis de algodão puro Roupas íntimas infantis</div><div class="product-description">Nível de segurança: Classe AProcesso Desossado: Nenhum Processo Desossado, Nome do tecido do nome: Algodão, Categoria de roupa interior: calcinha, Forma da Embalagem: Lite.</div>
+  
+ <a href="https://s.shopee.com.br/6VF0nb3ILM" class="botao" target="_blank">Compre aqui</a>  
 </tr>
 
 <!-- 🌸 Fila 4 -->
 <tr>
-  <td><img border="0" src="imagen13.jpg"><div class="product-name">Kit Até 10 Calcinhas Boxer Infantil Conforto Diário Cores Sortidas Tecido Macio e Respirável</div><div class="product-description">Dê uma olhada em Kit Até 10 Calcinhas Boxer Infantil Conforto Diário Cores Sortidas Tecido Macio e Respirável </div><a href="#"><button class="buy-button">https://s.shopee.com.br/9AFlyaDBsl</button></a></td>
-  <td><img border="0" src="imagen14.jpg"><div class="product-name">Smartwatch relogio X9 Pro 2 NFC GPT GPS relógio smartwatch masculino smartwatch iphone</div><div class="product-description">X9 pro 2 Série Relógio inteligente Destaques, ➤OpenAl's New ChatGPT！！！➤Positioning！！, ➤Double finger gesture operation！！！,➤NFC！！！</div><a href="#"><button class="buy-button">https://s.shopee.com.br/6KvabeLROL</button></a></td>
-  <td><img border="0" src="imagen15.jpg"><div class="product-name">Smartwatch W29S Serie 9 Ilha Dinâmica ChatGPT 47mm GPS Bussola Armazena Arquivo foto Chamada</div><div class="product-description"> Smartwatch W29S Microwear 47mm – Tecnologia Avançada e Estilo Moderno, Apresentamos o Smartwatch W29S Microwear 47mm, equipado com o novo sistema Micro OS 10, que proporciona uma interface mais rápida, estável e fluida. Ideal para acompanhar sua rotina agitada, ele combina design elegante, conectividade completa e funcionalidades de saúde e esportes, oferecendo uma experiência completa no seu pulso.</div><a href="#"><button class="buy-button">https://s.shopee.com.br/6Kvabj6Don</button></a></td>
-  <td><img border="0" src="imagen16.jpg"><div class="product-name">Relógio Smartwatch W99+ Plus Serie 9 Amoled Chat GPT 45mm Ilha Dinamica GPS Microwear Original</div><div class="product-description">• MEMÓRIA INTERNA para UPLOAD de LIVROS para leitura E MÚSICAS para ouvir SEM PRECISAR DO CELULAR PAREADO ao dispositivo. • Bluetooth independente para conectar o fone de ouvido bluetooth ao smart sem precisar do celular pareado ao dispositivo. • GPS (integrado ao APP) dinâmico no monitoramento de atividades ao ar livre (veja o trajeto direto do seu pulso). • Armazenamento de fotos no smartwatch.</div><a href="#"><button class="buy-button">https://s.shopee.com.br/3VbPEjpM1p</button></a></td>
+  <td><img border="0" src="imagen13.jpg"><div class="product-name">Kit Até 10 Calcinhas Boxer Infantil Conforto Diário Cores Sortidas Tecido Macio e Respirável</div><div class="product-description">Dê uma olhada em Kit Até 10 Calcinhas Boxer Infantil Conforto Diário Cores Sortidas Tecido Macio e Respirável </div>
+  
+  <a href="https://s.shopee.com.br/9AFlyaDBsl" class="botao" target="_blank">Compre aqui</a>
+  
+  
+  <td><img border="0" src="imagen14.jpg"><div class="product-name">Smartwatch relogio X9 Pro 2 NFC GPT GPS relógio smartwatch masculino smartwatch iphone</div><div class="product-description">X9 pro 2 Série Relógio inteligente Destaques, ➤OpenAl's New ChatGPT！！！➤Positioning！！, ➤Double finger gesture operation！！！,➤NFC！！！</div>
+  
+  <a href="https://s.shopee.com.br/6KvabeLROL" class="botao" target="_blank">Compre aqui</a>
+   
+ <td><img border="0" src="imagen15.jpg"><div class="product-name">Smartwatch W29S Serie 9 Ilha Dinâmica ChatGPT 47mm GPS Bussola Armazena Arquivo foto Chamada</div><div class="product-description"> Smartwatch W29S Microwear 47mm – Tecnologia Avançada e Estilo Moderno, Apresentamos o Smartwatch W29S Microwear 47mm, equipado com o novo sistema Micro OS 10, que proporciona uma interface mais rápida, estável e fluida. Ideal para acompanhar sua rotina agitada, ele combina design elegante, conectividade completa e funcionalidades de saúde e esportes, oferecendo uma experiência completa no seu pulso.</div>
+ 
+ <a href="https://s.shopee.com.br/6Kvabj6Don" class="botao" target="_blank">Compre aqui</a>
+
+ 
+ <td><img border="0" src="imagen16.jpg"><div class="product-name">Relógio Smartwatch W99+ Plus Serie 9 Amoled Chat GPT 45mm Ilha Dinamica GPS Microwear Original</div><div class="product-description">• MEMÓRIA INTERNA para UPLOAD de LIVROS para leitura E MÚSICAS para ouvir SEM PRECISAR DO CELULAR PAREADO ao dispositivo. • Bluetooth independente para conectar o fone de ouvido bluetooth ao smart sem precisar do celular pareado ao dispositivo. • GPS (integrado ao APP) dinâmico no monitoramento de atividades ao ar livre (veja o trajeto direto do seu pulso). • Armazenamento de fotos no smartwatch.</div>
+ 
+ <a href="https://s.shopee.com.br/3VbPEjpM1p" class="botao" target="_blank">Compre aqui</a>
+ 
 </tr>
 
 </tr>
@@ -266,7 +318,3 @@ footer {
 
 </body>
 </html>
-
-
-
-
