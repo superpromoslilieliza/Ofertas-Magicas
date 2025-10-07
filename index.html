@@ -1,323 +1,206 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-<style>
-/* Fondo general: degradé suave lila a rosado */
-body {
-  background: linear-gradient(135deg, #d8b7ff, #f6c8e0);
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  color: #4b0082; /* Texto principal lila oscuro */
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="ofertas mágicas, promoções online, descontos incríveis, produtos em destaque, achadinhos da internet, novidades imperdíveis, compras inteligentes, produtos com estilo, economize agora, tendências online, loja de ofertas, melhores achados, compras com desconto, produtos variados, oportunidades únicas">
+  <meta name="description" content="Ofertas Mágicas: promoções únicas, produtos que encantam e preços que vão te apaixonar. Descubra uma nova forma de comprar com estilo!">
+  <meta name="author" content="Lilian Cabrera">
+  <title>Ofertas Mágicas</title>
 
-/* Título principal */
-h1 {
-  text-align: center;
-  color: #6a0dad;
-  text-shadow: 0 0 8px #ffd700;
-  margin-top: 30px;
-}
+  <style>
+    /* 🌸 Estilos generales */
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #ecd9ff, #ffe0f0);
+      color: #4b006e;
+      text-align: center;
+    }
 
-/* Tarjetas de productos */
-.producto {
-  background-color: #f7e9ff;
-  border-radius: 15px;
-  box-shadow: 0 0 10px rgba(170, 120, 255, 0.3);
-  text-align: center;
-  padding: 15px;
-  transition: transform 0.3s;
-}
+    header {
+      background: radial-gradient(circle at top, #c79aff 0%, #f3c0f9 60%, #fde3ff 100%);
+      color: white;
+      font-size: 2.5em;
+      font-weight: bold;
+      text-shadow: 0 0 12px #d1a3ff, 0 0 25px #f8e0ff;
+      padding: 30px 10px;
+      border-bottom: 2px solid #d8aaff;
+    }
 
-.producto:hover {
-  transform: scale(1.03);
-}
+    /* 🌈 Contenedor general de productos */
+    .productos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      width: 95%;
+      max-width: 1200px;
+      margin: 40px auto;
+    }
 
-/* Nombre del producto */
-.producto h2 {
-  color: #6a0dad;
-  font-size: 18px;
-  margin: 10px 0;
-}
+    /* 🌟 Tarjeta de producto */
+    .producto {
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 16px;
+      box-shadow: 0 4px 15px rgba(160, 120, 200, 0.3);
+      padding: 15px;
+      transition: transform 0.3s;
+    }
 
-/* Descripción */
-.producto p {
-  color: #5a3d7a;
-  font-size: 14px;
-  margin-bottom: 15px;
-	
-}<style>
-}
+    .producto:hover {
+      transform: scale(1.03);
+    }
 
-.buy-button {
-  background: linear-gradient(135deg, #a46dfb, #d6b3ff);
-  color: #fff;
-  border: none;
-  border-radius: 25px;
-  padding: 10px 20px;
-  cursor: pointer;
-  font-weight: bold;
-  text-transform: uppercase;
-  box-shadow: 0 0 10px gold, 0 0 20px #ffd700;
-  transition: 0.3s;
-}
+    .producto img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
 
-.buy-button {
-  background: linear-gradient(135deg, #a46dfb, #d6b3ff);
-  color: #fff;
-  border: none;
-  border-radius: 25px;
-  padding: 10px 20px;
-  cursor: pointer;
-  font-weight: bold;
-  text-transform: uppercase;
-  box-shadow: 0 0 10px gold, 0 0 20px #ffd700;
-  transition: 0.3s;
-  position: relative;
-  overflow: hidden;
-}
+    .product-name {
+      font-size: 1.1em;
+      font-weight: bold;
+      color: #4a007d;
+      margin-bottom: 5px;
+    }
 
-.buy-button::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -75px;
-  width: 50px;
-  height: 100%;
-  background: rgba(255, 215, 0, 0.6);
-  transform: skewX(-20deg);
-  transition: 0.5s;
-}
+    .product-description {
+      font-size: 0.9em;
+      color: #6e4a8e;
+      margin-bottom: 15px;
+    }
 
-.buy-button:hover::after {
-  left: 125%;
-}
+    /* ✨ Botón dorado brillante */
+    .buy-button {
+      background: linear-gradient(135deg, #a46dfb, #d6b3ff);
+      color: #fff;
+      border: none;
+      border-radius: 25px;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-weight: bold;
+      text-transform: uppercase;
+      box-shadow: 0 0 10px gold, 0 0 20px #ffd700;
+      transition: 0.3s;
+      position: relative;
+      overflow: hidden;
+      text-decoration: none;
+      display: inline-block;
+    }
 
+    .buy-button::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -75px;
+      width: 50px;
+      height: 100%;
+      background: rgba(255, 215, 0, 0.6);
+      transform: skewX(-20deg);
+      transition: 0.5s;
+    }
 
+    .buy-button:hover::after {
+      left: 125%;
+    }
 
+    footer {
+      text-align: center;
+      padding: 30px 10px;
+      color: #4b006e;
+      font-size: 0.9em;
+      background-color: rgba(255, 255, 255, 0.5);
+      border-top: 2px solid #d8aaff;
+      margin-top: 40px;
+    }
 
-
-</style>
-
-
-</style>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="keywords" content="ofertas mágicas, promoções online, descontos incríveis, produtos em destaque, achadinhos da internet, novidades imperdíveis, compras inteligentes, produtos com estilo, economize agora, tendências online, loja de ofertas, melhores achados, compras com desconto, produtos variados, oportunidades únicas">
-<meta name="description" content="Ofertas Mágicas: promoções únicas, produtos que encantam e preços que vão te apaixonar. Descubra uma nova forma de comprar com estilo!">
-<meta name="author" content="Lilian Cabrera">
-
-<title>Ofertas Mágicas</title>
-<style>
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #ecd9ff, #ffe0f0);
-  color: #4b006e;
-  text-align: center;
-}
-
-header {
-  background: radial-gradient(circle at top, #c79aff 0%, #f3c0f9 60%, #fde3ff 100%);
-  color: white;
-  font-size: 2.5em;
-  font-weight: bold;
-  text-shadow: 0 0 12px #d1a3ff, 0 0 25px #f8e0ff;
-  padding: 30px 10px;
-  border-bottom: 2px solid #d8aaff;
-}
-
-table {
-  width: 95%;
-  margin: 30px auto;
-  border-spacing: 20px;
-}
-
-td {
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 16px;
-  box-shadow: 0 4px 15px rgba(160, 120, 200, 0.3);
-  padding: 15px;
-  vertical-align: top;
-  width: 25%;
-}
-
-.product-image {
-  width: 100%;
-  height: 180px;
-  border-radius: 10px;
-  margin-bottom: 10px;
-}
-
-.product-name {
-  font-size: 1.1em;
-  font-weight: bold;
-  color: #4a007d;
-  margin-bottom: 5px;
-}
-
-.product-description {
-  font-size: 0.9em;
-  color: #6e4a8e;
-  margin-bottom: 15px;
-}
-
-.buy-button {
-  background: linear-gradient(135deg, #a46dfb, #d6b3ff);
-  color: #fff;
-  border: none;
-  border-radius: 25px;
-  padding: 10px 20px;
-  cursor: pointer;
-  font-weight: bold;
-  text-transform: uppercase;
-  box-shadow: 0 0 10px gold, 0 0 20px #ffd700;
-  transition: 0.3s;
-  position: relative;
-  overflow: hidden;
-}
-
-.buy-button::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -75px;
-  width: 50px;
-  height: 100%;
-  background: rgba(255, 215, 0, 0.6);
-  transform: skewX(-20deg);
-  transition: 0.5s;
-}
-
-.buy-button:hover::after {
-  left: 125%;
-}
-
-footer {
-  text-align: center;
-  padding: 30px 10px;
-  color: #4b006e;
-  font-size: 0.9em;
-  background-color: rgba(255, 255, 255, 0.5);
-  border-top: 2px solid #d8aaff;
-  margin-top: 30px;
-}
-</style>
+    /* 🌺 Responsividad adicional */
+    @media (max-width: 768px) {
+      header {
+        font-size: 2em;
+      }
+      .buy-button {
+        padding: 8px 16px;
+        font-size: 0.9em;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<p>&nbsp;</p>
-<p><img border="0" src="logo.png" width="1024" height="373"></p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
+  <header>✨ Ofertas Mágicas ✨</header>
 
-<table>
-<!-- 🌸 Fila 1 -->
-<tr>
-  <td>
-    <img border="0" src="imagen1.jpg">
-    <div class="product-name">&nbsp;Conjunto Cama Box Espuma Atlanta Marrom Solteiro 88x188x62</div>
-    <div class="product-description">Dica Importante,Gostou do produto, mas o tamanho não se encaixa à sua necessidade? Não tem problema, o Conjunto Cama Box Atlanta está disponível em 5 medidas para que se adapte a qualquer ambiente. Nada melhor do que dormir confortavelmente, seja sozinho ou com seu parceiro, com um amplo espaço e conforto, não é mesmo?!.</div>
-    <a href="https://s.shopee.com.br/AKRie4eTry" class="botao" target="_blank">Compre aqui</a>  </td>
-  <td>
-    <img border="0" src="imagen2.jpg">
-    <div class="product-name">Bornal De Perna Tatico Leg Bag Reforçada Pochete Militar Gg Militar Impermeável Tecido Oxford</div>
-    <div class="product-description">Interior: PU impermeável 210D, Item no: novo saco de perna bolsa de cintura, Gênero aplicável: masculino,Tamanho: tamanho médio, Tipos de Pacotes Esportivos: Terceirização, Esportes aplicáveis: esportes ao ar livre.</div>
-     <a href="https://s.shopee.com.br/1BDUGZEQvU" class="botao" target="_blank">Compre aqui</a>  </td>
-  <td>
-    <img border="0" src="imagen3.jpg">
-    <div class="product-name">QUEIMA DE ESTOQUE - Aparador Buffet E&A 3 Portas com Pés Retro Cantinho Do Café</div>
-    <div class="product-description">O Buffet é a combinação perfeita de charme, sofisticação, modernidade e um toque retrô. Além disso, ajuda a organizar o seu ambiente. Possui 2 prateleiras abertas e 1 compartimento com porta, que ajudam a acomodar seus aparelhos eletrônicos e objetos decorativos.
+  <img src="logo.png" alt="Logo Ofertas Mágicas" style="width:90%; max-width:800px; margin:30px auto; display:block;">
 
-.</div>
-    <a href="https://s.shopee.com.br/11X1LJsSh" class="botao" target="_blank">Compre aqui</a>
-  </td>
-  <td>
-    <img border="0" src="imagen4.jpg">
-    <div class="product-name">Tênis Feminino Casual Cinza Caramelo Branco Leve Macio Mais Vendido</div>
-    <div class="product-description"> ENVIO IMEDIATO Super Macio E EXTREMAMENTE Confortável!!!&nbsp; Nossas formas são padrões, 
-		escolha a numeração que habitua usar, mas para lhe ajudar ainda mais, 
-		aqui está a nossa tabela de medidas.</div>
-   <a href="https://s.shopee.com.br/6Kvaa3zQq6" class="botao" target="_blank">Compre aqui</a>  </td>
-</tr>
+  <section class="productos">
+    <!-- 🌸 Producto 1 -->
+    <div class="producto">
+      <img src="imagen1.jpg" alt="Cama Box Espuma Atlanta">
+      <div class="product-name">Conjunto Cama Box Espuma Atlanta Marrom Solteiro 88x188x62</div>
+      <div class="product-description">Disponível em 5 medidas para máximo conforto. Perfeito para dormir bem, sozinho ou acompanhado.</div>
+      <a href="https://s.shopee.com.br/AKRie4eTry" class="buy-button" target="_blank">Compre aqui</a>
+    </div>
 
-<!-- 🌸 Fila 2 -->
-<tr>
-  <td><img border="0" src="imagen5.jpg"> <div class="product-name">
-	<span style="color: rgba(0, 0, 0, 0.8); font-family: Roboto, SHPBurmese, SHPKhmer, &quot;Helvetica Neue&quot;, Helvetica, Arial, 文泉驛正黑, &quot;WenQuanYi Zen Hei&quot;, &quot;Hiragino Sans GB&quot;, &quot;儷黑 Pro&quot;, &quot;LiHei Pro&quot;, &quot;Heiti TC&quot;, 微軟正黑體, &quot;Microsoft JhengHei UI&quot;, &quot;Microsoft JhengHei&quot;, sans-serif; font-size: 20px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 500; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">
-	Tênis Casual Femininio Estiloso Skatista Dia a Dia Envio Imediato Qualidade 
-	Barato Envio Imediato</span></div><div class="product-description">ENVIO IMEDIATO Super Macio E EXTREMAMENTE Confortável!!!.<p>&nbsp;</div>
-	
-	<a href="https://s.shopee.com.br/2LPRor2IF9" class="botao" target="_blank">Compre aqui</a> </td>
-	
-  <td><img border="0" src="imagen6.jpg"><div class="product-name">Tênis Casual Feminino Confortável Branco Caramelo Preto Dia a Dia Estiloso Moda Blogueira Barato</div><div class="product-description">Dê uma olhada em Tênis Casual Feminino Confortável Branco Caramelo Preto Dia a Dia Estiloso Moda Blogueira Barato.</div><a 
-  
-  <a href="https://s.shopee.com.br/30f8cB68BF" class="botao" target="_blank">Compre aqui</a> </td>
-    
-  <td><img border="0" src="imagen7.jpg"><div class="product-name">
-    
-Tênis Feminino Branco Casual Confortavel Leve Solado Macio Estiloso StreetWear 
-Barato<div class="product-description">Dê uma olhada em Tênis Feminino Branco Casual Confortavel Leve Solado Macio Estiloso StreetWear Barato.</div>
+    <!-- 🌸 Producto 2 -->
+    <div class="producto">
+      <img src="imagen2.jpg" alt="Bornal de Perna Militar">
+      <div class="product-name">Bornal De Perna Tático Leg Bag Reforçada Pochete Militar</div>
+      <div class="product-description">Impermeável, resistente e ideal para esportes ao ar livre. Conforto e praticidade.</div>
+      <a href="https://s.shopee.com.br/1BDUGZEQvU" class="buy-button" target="_blank">Compre aqui</a>
+    </div>
 
- <a href="https://s.shopee.com.br/2qLiPzqKoe" class="botao" target="_blank">Compre aqui</a>  </td>
+    <!-- 🌸 Producto 3 -->
+    <div class="producto">
+      <img src="imagen3.jpg" alt="Aparador Buffet Retro">
+      <div class="product-name">Aparador Buffet E&A 3 Portas com Pés Retrô</div>
+      <div class="product-description">Charme, sofisticação e praticidade em um só móvel. Ideal para sala ou cantinho do café.</div>
+      <a href="https://s.shopee.com.br/11X1LJsSh" class="buy-button" target="_blank">Compre aqui</a>
+    </div>
 
+    <!-- 🌸 Producto 4 -->
+    <div class="producto">
+      <img src="imagen4.jpg" alt="Tênis Feminino Casual">
+      <div class="product-name">Tênis Feminino Casual Cinza Caramelo Branco</div>
+      <div class="product-description">Leve, macio e super confortável. Modelagem padrão e moderna para o dia a dia.</div>
+      <a href="https://s.shopee.com.br/6Kvaa3zQq6" class="buy-button" target="_blank">Compre aqui</a>
+    </div>
 
-  <td><img border="0" src="imagen8.jpg"><div class="product-name">Guarda Roupa Dobrável Organizador De Roupas Armário Grande</div><div class="product-description">Dê uma olhada em Guarda Roupa Dobrável Organizador De Roupas Armário Grande.</div>
-  
- <a href="https://s.shopee.com.br/6AcAOSmgyM" class="botao" target="_blank">Compre aqui</a>
- 
-</tr>
+    <!-- 🌸 Producto 5 -->
+    <div class="producto">
+      <img src="imagen5.jpg" alt="Tênis Skatista">
+      <div class="product-name">Tênis Casual Feminino Estiloso Skatista</div>
+      <div class="product-description">Envio imediato! Super macio e estiloso. Perfeito para uso diário.</div>
+      <a href="https://s.shopee.com.br/2LPRor2IF9" class="buy-button" target="_blank">Compre aqui</a>
+    </div>
 
-<!-- 🌸 Fila 3 -->
-<tr>
-  <td><img border="0" src="imagen9.jpg"><div class="product-name">Guarda Roupa Portátil Desmontável Organizador Prático Solteiro e Casal</div><div class="product-description">Dê uma olhada em Guarda Roupa Portátil Desmontável Organizador Prático Solteiro e Casal .</div>
-  
- <a href="https://s.shopee.com.br/2B61dEGlAe" class="botao" target="_blank">Compre aqui</a>
+    <!-- 🌸 Producto 6 -->
+    <div class="producto">
+      <img src="imagen6.jpg" alt="Tênis Blogueira">
+      <div class="product-name">Tênis Casual Feminino Confortável Branco e Caramelo</div>
+      <div class="product-description">Estilo e conforto em um só produto. Ideal para o dia a dia moderno.</div>
+      <a href="https://s.shopee.com.br/30f8cB68BF" class="buy-button" target="_blank">Compre aqui</a>
+    </div>
 
-   
-  <td><img border="0" src="imagen10.jpg"><div class="product-name">&nbsp;</div><div class="product-description">Dê uma olhada em Sapateira 4/5 andares Organizador de Sapatos Tênis 8/10 Pares Desmontável.</div>
-  
-  <a href="https://s.shopee.com.br/40XfofhIGj" class="botao" target="_blank">Compre aqui</a>
+    <!-- 🌸 Producto 7 -->
+    <div class="producto">
+      <img src="imagen7.jpg" alt="Tênis Branco Streetwear">
+      <div class="product-name">Tênis Feminino Branco Casual Streetwear</div>
+      <div class="product-description">Leve, estiloso e confortável. Um clássico que combina com tudo!</div>
+      <a href="https://s.shopee.com.br/2qLiPzqKoe" class="buy-button" target="_blank">Compre aqui</a>
+    </div>
 
-  
-  <td><img border="0" src="imagen11.jpg"><div class="product-name">Guarda Roupa Dobrável Organizador De Roupas Com Ziper Multifuncional</div><div class="product-description">Dê uma olhada em Guarda Roupa Dobrável Organizador De Roupas Com Ziper Multifuncional .</div><a 
-  
-   <a href="https://s.shopee.com.br/6AcAOozsA6" class="botao" target="_blank">Compre aqui</a>
- 
- <td><img border="0" src="imagen12.jpg"><div class="product-name">[ZY] 2-14y 
-	Estoque Pronto Roupas íntimas infantis de algodão </div><div class="product-description">Nível de segurança: Classe AProcesso 
-	Desossado: Nenhum Processo Desossado, Nome do tecido do nome: Algodão, </div>
-  
- <a href="https://s.shopee.com.br/6VF0nb3ILM" class="botao" target="_blank">Compre aqui</a>  
-</tr>
+    <!-- 🌸 Producto 8 -->
+    <div class="producto">
+      <img src="imagen8.jpg" alt="Guarda Roupa Dobrável">
+      <div class="product-name">Guarda Roupa Dobrável Organizador Grande</div>
+      <div class="product-description">Espaçoso, prático e fácil de montar. Organização inteligente.</div>
+      <a href="https://s.shopee.com.br/6AcAOSmgyM" class="buy-button" target="_blank">Compre aqui</a>
+    </div>
+  </section>
 
-<!-- 🌸 Fila 4 -->
-<tr>
-  <td><img border="0" src="imagen13.jpg"><div class="product-name">Kit Até 10 Calcinhas Boxer Infantil Conforto Diário Cores Sortidas Tecido Macio e Respirável</div><div class="product-description">Dê uma olhada em Kit Até 10 Calcinhas Boxer Infantil Conforto Diário Cores Sortidas Tecido Macio e Respirável </div>
-  
-  <a href="https://s.shopee.com.br/9AFlyaDBsl" class="botao" target="_blank">Compre aqui</a>
-  
-  
-  <td><img border="0" src="imagen14.jpg"><div class="product-name">Smartwatch relogio X9 Pro 2 NFC GPT GPS relógio smartwatch masculino smartwatch iphone</div><div class="product-description">X9 pro 2 Série Relógio inteligente Destaques, ➤OpenAl's New ChatGPT！！！➤Positioning！！, ➤Double finger gesture operation！！！,➤NFC！！！</div>
-  
-  <a href="https://s.shopee.com.br/6KvabeLROL" class="botao" target="_blank">Compre aqui</a>
-   
- <td><img border="0" src="imagen15.jpg"><div class="product-name">Smartwatch W29S Serie 9 Ilha Dinâmica ChatGPT 47mm GPS Bussola Armazena Arquivo foto Chamada</div><div class="product-description"> Smartwatch W29S Microwear 47mm – Tecnologia Avançada e Estilo Moderno, Apresentamos o Smartwatch W29S </div>
- 
- <a href="https://s.shopee.com.br/6Kvabj6Don" class="botao" target="_blank">Compre aqui</a>
-
- 
- <td><img border="0" src="imagen16.jpg"><div class="product-name">Relógio Smartwatch W99+ Plus Serie 9 Amoled Chat GPT 45mm Ilha Dinamica GPS Microwear Original</div><div class="product-description">• MEMÓRIA INTERNA para UPLOAD de LIVROS para leitura E MÚSICAS para ouvir SEM PRECISAR DO CELULAR PAREADO ao dispositivo. • </div>
- 
- <a href="https://s.shopee.com.br/3VbPEjpM1p" class="botao" target="_blank">Compre aqui</a>
- 
-</tr>
-
-</tr>
-</table>
-
-<footer>© 2025 Lilian Cabrera. Todos os direitos reservados.</footer>
+  <footer>© 2025 Lilian Cabrera. Todos os direitos reservados.</footer>
 
 </body>
 </html>
